@@ -42,5 +42,12 @@ std::pair<SetOfLightableRefs,SetOfLightableRefs> Decoder<SystematicSwitchPolicy>
     return make_pair(toOff, toOn);
 }
 
+template<bool SystematicSwitchPolicy>
+SetOfLightableRefs Decoder<SystematicSwitchPolicy>::getAll()
+{
+    return _all;
+}
+
+
 // Explicit instantiation of class template
 template class Decoder<false>;

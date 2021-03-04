@@ -19,4 +19,5 @@ class Decoder
 public:
     virtual void learn(int id, LightableRef const light);
     virtual std::pair<SetOfLightableRefs,SetOfLightableRefs> computeChange(int prevId, int nextId);
+    virtual SetOfLightableRefs getAll();
 };

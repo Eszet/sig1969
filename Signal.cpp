@@ -27,3 +27,16 @@ void Signal::apply(enum SignalAspect state)
 
     _state = state;
 }
+
+bool Signal::execute(void)
+{
+    bool result = false;
+  
+    for(auto light : _decoder.getAll())
+    {
+        if(light->execute())
+            result = true;
+    }
+
+    return result;
+}

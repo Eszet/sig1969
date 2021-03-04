@@ -13,3 +13,8 @@ void DigitalLed::turn(enum LightState state)
 {
     digitalWrite(_pin, state == LightOn ? _levelWhenOn : _levelWhenOff);
 }
+
+bool DigitalLed::execute(void)
+{
+  return false;
+}

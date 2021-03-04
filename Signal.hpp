@@ -21,6 +21,7 @@ class Signal {
 public:
     Signal(LightFactory& f);
     virtual void apply(enum SignalAspect state);
+    virtual bool execute(void);
 protected:
     virtual void assign(int id, enum LightId lid);
 };
